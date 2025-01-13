@@ -18,7 +18,10 @@ async def start_command(message: types.Message) -> None:
         "8 - Бокситы\n"
         "9 - Нефелиновые руды\n"
         "10 - Медь\n"
-        "11 - Никель\n",
+        "11 - Никель\n"
+        "12 - Кобальт\n"
+        "13 - Свинец\n"
+        "14 - Цинк\n",
         reply_markup=types.ReplyKeyboardRemove()
     )
 
@@ -259,6 +262,72 @@ async def nickel(message: types.Message):
     @dp.message(F.text == "Добыча никеля")
     async def nickel_mining(message: types.Message):
         await message.answer("https://datawrapper.dwcdn.net/9txGM/2/")
+
+
+
+
+
+#12 - Кобальт
+@dp.message(F.text == "12")
+async def cobalt(message: types.Message):
+    kb = [
+        [types.KeyboardButton(text="Запасы кобальта"), types.KeyboardButton(text="Добыча кобальта")],
+        [types.KeyboardButton(text="Назад")]
+    ]
+    keyboard = types.ReplyKeyboardMarkup(keyboard=kb, resize_keyboard=True)
+    await message.answer("Вы хотите получить статистику запасов или добычи?", reply_markup=keyboard)
+
+    @dp.message(F.text == "Запасы кобальта")
+    async def cobalt_reserves(message: types.Message):
+        await message.answer("https://datawrapper.dwcdn.net/UhhkY/1/")
+
+    @dp.message(F.text == "Добыча кобальта")
+    async def cobalt_mining(message: types.Message):
+        await message.answer("https://datawrapper.dwcdn.net/O7X8g/1/")
+
+
+
+
+
+#13 - Свинец
+@dp.message(F.text == "11")
+async def lead(message: types.Message):
+    kb = [
+        [types.KeyboardButton(text="Запасы свинца"), types.KeyboardButton(text="Добыча свинца")],
+        [types.KeyboardButton(text="Назад")]
+    ]
+    keyboard = types.ReplyKeyboardMarkup(keyboard=kb, resize_keyboard=True)
+    await message.answer("Вы хотите получить статистику запасов или добычи?", reply_markup=keyboard)
+
+    @dp.message(F.text == "Запасы свинца")
+    async def lead_reserves(message: types.Message):
+        await message.answer("https://datawrapper.dwcdn.net/dqwwk/1/")
+
+    @dp.message(F.text == "Добыча свинца")
+    async def lead_mining(message: types.Message):
+        await message.answer("https://datawrapper.dwcdn.net/Rl0In/1/")
+
+
+
+
+
+#14 - Цинк
+@dp.message(F.text == "11")
+async def zinc(message: types.Message):
+    kb = [
+        [types.KeyboardButton(text="Запасы цинка"), types.KeyboardButton(text="Добыча цинка")],
+        [types.KeyboardButton(text="Назад")]
+    ]
+    keyboard = types.ReplyKeyboardMarkup(keyboard=kb, resize_keyboard=True)
+    await message.answer("Вы хотите получить статистику запасов или добычи?", reply_markup=keyboard)
+
+    @dp.message(F.text == "Запасы цинка")
+    async def zinc_reserves(message: types.Message):
+        await message.answer("https://datawrapper.dwcdn.net/gnace/1/")
+
+    @dp.message(F.text == "Добыча цинка")
+    async def zinc_mining(message: types.Message):
+        await message.answer("https://datawrapper.dwcdn.net/1ZEg4/1/")
 
 
 

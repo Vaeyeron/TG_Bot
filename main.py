@@ -25,7 +25,21 @@ async def start_command(message: types.Message) -> None:
         "15 - Олово\n"
         "16 - Вольфрам\n"
         "17 - Молибден\n"
-        "18 - Титан\n",
+        "18 - Титан\n"
+        "19 - Цирконий\n"
+        "20 - Литий\n"
+        "21 - Редкоземельные металлы\n"
+        "22 - Скандий\n"
+        "23 - Золото\n"
+        "24 - Серебро\n"
+        "25 - Платиноиды\n"
+        "26 - Алмазы\n"
+        "27 - Графит\n"
+        "28 - Апатитовые руды\n"
+        "29 - Фосфоритовые руды\n"
+        "30 - Калийные соли\n"
+        "31 - Плавиковый шпат\n"
+        "32 - Цементное сырьё",
         reply_markup=types.ReplyKeyboardRemove()
     )
 
@@ -443,6 +457,287 @@ async def zirconium(message: types.Message):
     async def zirconium_mining(message: types.Message):
         await message.answer("https://datawrapper.dwcdn.net/gcC3P/1/")
 
+
+
+
+
+#20 - Литий
+@dp.message(F.text == "20")
+async def lithium(message: types.Message):
+    kb = [
+        [types.KeyboardButton(text="Запасы лития"), types.KeyboardButton(text="Добыча лития")],
+        [types.KeyboardButton(text="Назад")]
+    ]
+    keyboard = types.ReplyKeyboardMarkup(keyboard=kb, resize_keyboard=True)
+    await message.answer("Вы хотите получить статистику запасов или добычи?", reply_markup=keyboard)
+
+    @dp.message(F.text == "Запасы лития")
+    async def lithium_reserves(message: types.Message):
+        await message.answer("https://datawrapper.dwcdn.net/Pph19/1/")
+
+    @dp.message(F.text == "Добыча лития")
+    async def lithium_mining(message: types.Message):
+        await message.answer("В России не ведется промышленная добыча лития")
+
+
+
+
+
+#21 - редкоземельные металлы
+@dp.message(F.text == "21")
+async def raremetal(message: types.Message):
+    kb = [
+        [types.KeyboardButton(text="Запасы редкоземельных металлов"), types.KeyboardButton(text="Добыча редкоземельных металлов")],
+        [types.KeyboardButton(text="Назад")]
+    ]
+    keyboard = types.ReplyKeyboardMarkup(keyboard=kb, resize_keyboard=True)
+    await message.answer("Вы хотите получить статистику запасов или добычи?", reply_markup=keyboard)
+
+    @dp.message(F.text == "Запасы редкоземельных металлов")
+    async def raremetal_reserves(message: types.Message):
+        await message.answer("https://datawrapper.dwcdn.net/UYnKi/1/")
+
+    @dp.message(F.text == "Добыча редкоземельных металлов")
+    async def raremetal_mining(message: types.Message):
+        await message.answer("https://datawrapper.dwcdn.net/ChGW2/1/")
+
+
+
+
+
+#22 - скандий
+@dp.message(F.text == "22")
+async def scandium(message: types.Message):
+    kb = [
+        [types.KeyboardButton(text="Запасы скандия"), types.KeyboardButton(text="Добыча скандия")],
+        [types.KeyboardButton(text="Назад")]
+    ]
+    keyboard = types.ReplyKeyboardMarkup(keyboard=kb, resize_keyboard=True)
+    await message.answer("Вы хотите получить статистику запасов или добычи?", reply_markup=keyboard)
+
+    @dp.message(F.text == "Запасы скандия")
+    async def scandium_reserves(message: types.Message):
+        await message.answer("https://datawrapper.dwcdn.net/eVvPU/1/")
+
+    @dp.message(F.text == "Добыча скандия")
+    async def scandium_mining(message: types.Message):
+        await message.answer("https://datawrapper.dwcdn.net/wVS1Q/1/")
+
+
+
+
+
+#23 - золото
+@dp.message(F.text == "23")
+async def gold(message: types.Message):
+    kb = [
+        [types.KeyboardButton(text="Запасы золота"), types.KeyboardButton(text="Добыча золота")],
+        [types.KeyboardButton(text="Назад")]
+    ]
+    keyboard = types.ReplyKeyboardMarkup(keyboard=kb, resize_keyboard=True)
+    await message.answer("Вы хотите получить статистику запасов или добычи?", reply_markup=keyboard)
+
+    @dp.message(F.text == "Запасы золота")
+    async def gold_reserves(message: types.Message):
+        await message.answer("https://datawrapper.dwcdn.net/HgIvs/1/")
+
+    @dp.message(F.text == "Добыча золота")
+    async def gold_mining(message: types.Message):
+        await message.answer("https://datawrapper.dwcdn.net/ACIJ0/1/")
+
+
+
+
+
+#24 - Серебро
+@dp.message(F.text == "24")
+async def silver(message: types.Message):
+    kb = [
+        [types.KeyboardButton(text="Запасы серебра"), types.KeyboardButton(text="Добыча серебра")],
+        [types.KeyboardButton(text="Назад")]
+    ]
+    keyboard = types.ReplyKeyboardMarkup(keyboard=kb, resize_keyboard=True)
+    await message.answer("Вы хотите получить статистику запасов или добычи?", reply_markup=keyboard)
+
+    @dp.message(F.text == "Запасы серебра")
+    async def silver_reserves(message: types.Message):
+        await message.answer("https://datawrapper.dwcdn.net/PNVH6/1/")
+
+    @dp.message(F.text == "Добыча серебра")
+    async def silver_mining(message: types.Message):
+        await message.answer("https://datawrapper.dwcdn.net/w6iKR/1/")
+
+
+
+
+
+#25 - платиноиды
+@dp.message(F.text == "25")
+async def platinum(message: types.Message):
+    kb = [
+        [types.KeyboardButton(text="Запасы платиноидов"), types.KeyboardButton(text="Добыча платиноидов")],
+        [types.KeyboardButton(text="Назад")]
+    ]
+    keyboard = types.ReplyKeyboardMarkup(keyboard=kb, resize_keyboard=True)
+    await message.answer("Вы хотите получить статистику запасов или добычи?", reply_markup=keyboard)
+
+    @dp.message(F.text == "Запасы платиноидов")
+    async def platinum_reserves(message: types.Message):
+        await message.answer("https://datawrapper.dwcdn.net/saY8t/1/")
+
+    @dp.message(F.text == "Добыча платиноидов")
+    async def platinum_mining(message: types.Message):
+        await message.answer("https://datawrapper.dwcdn.net/5KRHv/1/")
+
+
+
+
+
+#26 - алмазы
+@dp.message(F.text == "26")
+async def diamond(message: types.Message):
+    kb = [
+        [types.KeyboardButton(text="Запасы алмазов"), types.KeyboardButton(text="Добыча алмазов")],
+        [types.KeyboardButton(text="Назад")]
+    ]
+    keyboard = types.ReplyKeyboardMarkup(keyboard=kb, resize_keyboard=True)
+    await message.answer("Вы хотите получить статистику запасов или добычи?", reply_markup=keyboard)
+
+    @dp.message(F.text == "Запасы алмазов")
+    async def diamond_reserves(message: types.Message):
+        await message.answer("https://datawrapper.dwcdn.net/lJr3M/1/")
+
+    @dp.message(F.text == "Добыча алмазов")
+    async def diamond_mining(message: types.Message):
+        await message.answer("https://datawrapper.dwcdn.net/l9Hkx/1/")
+
+
+
+
+
+#27 - графит
+@dp.message(F.text == "27")
+async def graphite(message: types.Message):
+    kb = [
+        [types.KeyboardButton(text="Запасы графита"), types.KeyboardButton(text="Добыча графита")],
+        [types.KeyboardButton(text="Назад")]
+    ]
+    keyboard = types.ReplyKeyboardMarkup(keyboard=kb, resize_keyboard=True)
+    await message.answer("Вы хотите получить статистику запасов или добычи?", reply_markup=keyboard)
+
+    @dp.message(F.text == "Запасы графита")
+    async def graphite_reserves(message: types.Message):
+        await message.answer("https://datawrapper.dwcdn.net/ZZThZ/1/")
+
+    @dp.message(F.text == "Добыча графита")
+    async def graphite_mining(message: types.Message):
+        await message.answer("https://datawrapper.dwcdn.net/2hTzR/1/")
+
+
+
+
+
+#28 - апатитовые руды
+@dp.message(F.text == "28")
+async def apatites(message: types.Message):
+    kb = [
+        [types.KeyboardButton(text="Запасы апатитовых руд"), types.KeyboardButton(text="Добыча апатитовых руд")],
+        [types.KeyboardButton(text="Назад")]
+    ]
+    keyboard = types.ReplyKeyboardMarkup(keyboard=kb, resize_keyboard=True)
+    await message.answer("Вы хотите получить статистику запасов или добычи?", reply_markup=keyboard)
+
+    @dp.message(F.text == "Запасы апатитовых руд")
+    async def apatites_reserves(message: types.Message):
+        await message.answer("https://datawrapper.dwcdn.net/Pjm4R/1/")
+
+    @dp.message(F.text == "Добыча апатитовых руд")
+    async def apatites_mining(message: types.Message):
+        await message.answer("https://datawrapper.dwcdn.net/5vkFD/1/")
+
+
+
+
+
+#29 - Фосфоритовые руды
+@dp.message(F.text == "29")
+async def phosphorites(message: types.Message):
+    kb = [
+        [types.KeyboardButton(text="Запасы фосфоритовых руд"), types.KeyboardButton(text="Добыча фосфоритовых руд")],
+        [types.KeyboardButton(text="Назад")]
+    ]
+    keyboard = types.ReplyKeyboardMarkup(keyboard=kb, resize_keyboard=True)
+    await message.answer("Вы хотите получить статистику запасов или добычи?", reply_markup=keyboard)
+
+    @dp.message(F.text == "Запасы фосфоритовых руд")
+    async def phosphorites_reserves(message: types.Message):
+        await message.answer("https://datawrapper.dwcdn.net/dwjms/1/")
+
+    @dp.message(F.text == "Добыча фосфоритовых руд")
+    async def phosphorites_mining(message: types.Message):
+        await message.answer("https://datawrapper.dwcdn.net/QHXv0/1/")
+
+
+
+
+
+#30 - калийные соли
+@dp.message(F.text == "30")
+async def potassiumsalts(message: types.Message):
+    kb = [
+        [types.KeyboardButton(text="Запасы калийных солей"), types.KeyboardButton(text="Добыча калийных солей")],
+        [types.KeyboardButton(text="Назад")]
+    ]
+    keyboard = types.ReplyKeyboardMarkup(keyboard=kb, resize_keyboard=True)
+    await message.answer("Вы хотите получить статистику запасов или добычи?", reply_markup=keyboard)
+
+    @dp.message(F.text == "Запасы калийных солей")
+    async def potassiumsalts_reserves(message: types.Message):
+        await message.answer("https://datawrapper.dwcdn.net/jae2A/1/")
+
+    @dp.message(F.text == "Добыча калийных солей")
+    async def potassiumsalts_mining(message: types.Message):
+        await message.answer("https://datawrapper.dwcdn.net/0MU9j/1/")
+
+
+
+
+
+#31 - Плавиковый шпат
+@dp.message(F.text == "31")
+async def fluorspar(message: types.Message):
+    kb = [
+        [types.KeyboardButton(text="Запасы плавикового шпата"), types.KeyboardButton(text="Добыча плавикового шпата")],
+        [types.KeyboardButton(text="Назад")]
+    ]
+    keyboard = types.ReplyKeyboardMarkup(keyboard=kb, resize_keyboard=True)
+    await message.answer("Вы хотите получить статистику запасов или добычи?", reply_markup=keyboard)
+
+    @dp.message(F.text == "Запасы плавикового шпата")
+    async def fluorspar_reserves(message: types.Message):
+        await message.answer("https://datawrapper.dwcdn.net/lSkmx/1/")
+
+    @dp.message(F.text == "Добыча плавикового шпата")
+    async def fluorspar_mining(message: types.Message):
+        await message.answer("https://datawrapper.dwcdn.net/2WVlT/1/")
+
+
+
+
+
+#32 - Цементное сырьё
+@dp.message(F.text == "32")
+async def cement(message: types.Message):
+    kb = [
+        [types.KeyboardButton(text="Добыча цементного сырья")],
+        [types.KeyboardButton(text="Назад")]
+    ]
+    keyboard = types.ReplyKeyboardMarkup(keyboard=kb, resize_keyboard=True)
+    await message.answer("Статистика добычи", reply_markup=keyboard)
+
+    @dp.message(F.text == "Добыча цементного сырья")
+    async def cement_mining(message: types.Message):
+        await message.answer("https://datawrapper.dwcdn.net/PN0dq/1/")
 
 
 
